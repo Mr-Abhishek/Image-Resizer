@@ -1,38 +1,90 @@
 <html>
-<body bgcolor="#008080">
-    
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-image: url('abcd.jpg');
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+</head>
+<body> 
+
+    <center>
+        <h1>
+            <header><h2>Image Resizer<span>&#174;</span></h2></header>
+        <hr>
+        </hr>   
+        <marquee>You can convert any image in any format or pixel you want to.....!</marquee></br>  
+            <p align="right"> <a href="logout.php">Logout</a></p>
+            <form action="" method="post" enctype="multipart/form-data">
+                <label>Convert into<select name="size"><option value="100px*100px">100px * 100px </option>
+                    <option value="200px*200px">200px * 200px </option>
+                    <option value="300px*300px">300px * 300px </option>
+                    <option value="400px*400px">400px * 400px </option>
+                    <option value="500px*500px">500px * 500px </option>
+                    <option value="600px*600px">600px * 600px </option>
+                    </select>
+                </label></br></br></br></br></br>
+                        <div class="form-group">
+                        <label class="">Choose Image</label>
+                        <input type="file" name="upload_image"/>
+                        </div></br>
+
+                    <input type="submit" name="form_submit" class="btn btn-primary" value="submit" />
+            </form>
+        </h1>
+        <hr></hr>
+    </center>
 <center>
-    <h1>
-        <header><h2>Image Resizer</h2></header>
-		<p align="right"> <a href="logout.php">Logout</a></p>
-<form action="" method="post" enctype="multipart/form-data">
-<h6>convert into<select name="size"><option value="100px*100px">100px * 100px </option>
-<option value="200px*200px">200px * 200px </option>
-<option value="300px*300px">300px * 300px </option>
-<option value="400px*400px">400px * 400px </option>
-<option value="500px*500px">500px * 500px </option>
-</select></h6>
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a> 
+<p font style="color:white;">Contact :- abhishek555@gmail.com/98952545875</p>
 
-<hr>
-</br>
-</br>
-
-
-<div class="form-group">
-    <label class="">Choose Image</label>
-    <input type="file" name="upload_image"/>
-</div>
-</hr>
-</br>
-<input type="submit" name="form_submit" class="btn btn-primary" value="submit" />
-</br>
-
-<hr><footer>contacts us : abhishek@gmail.com</footer></hr>
-</form>
-   </h1>
- </center>
-</body>
-<?php
+</center> 
+</body><?php
 function resizeImage($resourceType,$image_width,$image_height, $resizeWidth,$resizeHeight) {
   //  $resizeWidth = 300;
    // $resizeHeight = 300;
